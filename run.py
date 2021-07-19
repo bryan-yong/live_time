@@ -12,7 +12,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 # Opens JSON file for credentials and inputs into appropriate fields
 def login():
-    credentials = 'C:\Python\live_time\credentials.json'
+    credentials = 'PATH TO YOUR credentials.json FILE'
     driver.get('https://ithelpdesk.philasd.org/LiveTime/WebObjects/LiveTime.woa/wa/Login')
     
     # Waits to see login fields appear on page before finally logging in
@@ -58,7 +58,7 @@ def incidents():
 def send_alert(alert):
     # Defines path to where credentials are stored in a json file
     # Then opens the json file as read to grab data for credentials
-    credentials = 'C:\Python\live_time\credentials.json'
+    credentials = 'PATH TO YOUR credentials.json FILE'
     with open(credentials, 'r') as data:
         info = json.load(data)
         user = info['email']
@@ -69,7 +69,7 @@ def send_alert(alert):
         msg.set_content(formatted.replace(',', '\n'))
         msg['Subject'] = 'WORK STOPPAGE DETECTED'
         msg['From'] = user
-        msg['To'] = 'byong@philasd.org', '2673048026@tmomail.net'
+        msg['To'] = 'email address(es) or phone number(s)'
         # Creates a local SMTP_SSL server to send message from service account to stored address
         # Then closes server once message is sent
         try:
