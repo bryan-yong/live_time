@@ -13,7 +13,7 @@ from selenium.webdriver.support import expected_conditions as EC
 # Opens JSON file for credentials and inputs into appropriate fields
 def login():
     credentials = 'PATH TO YOUR credentials.json FILE'
-    driver.get('https://ithelpdesk.philasd.org/LiveTime/WebObjects/LiveTime.woa/wa/Login')
+    driver.get('REMOVED URL')
     
     # Waits to see login fields appear on page before finally logging in
     # if login in field is never found webdriver will redirect to login page
@@ -23,7 +23,7 @@ def login():
             EC.presence_of_element_located((By.XPATH, '/html/body/div/form/input[1]'))
         )
     except:
-        driver.get('https://ithelpdesk.philasd.org/LiveTime/WebObjects/LiveTime.woa/wa/Login')
+        driver.get('REMOVED URL')
     
     finally:
         with open(credentials, 'r') as data:
