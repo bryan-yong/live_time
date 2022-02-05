@@ -15,3 +15,4 @@ How the tool works:
 - This should all be controlled with a while loop to run x amount of time
 - time python library is imported to control how long the script runs
 
+Removed URL leading to ticketing system as it is used by my organization.
